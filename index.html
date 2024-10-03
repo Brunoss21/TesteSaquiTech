@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Emissão de NF-e</title>
+</head>
+<body>
+    <main>
+        <section>
+            <h1>Emissão de uma Nota Fiscal de Serviço (NFS-e) </h1>
+            <form id="formulario-nfs">
+                <label for="valorVenda">Valor da Venda (R$):</label>
+                    <input type="number" id="valorVenda" required> 
+                <label for="itensVendidos">Itens Vendidos: </label>
+                    <input type="text" id="itensV" required> 
+                <label for="irpf">IRPF (%):</label>
+                    <input type="number" id="irpf" step="0.01" required>
+                <label for="pis">PIS (%):</label>
+                    <input type="number" id="pis" step="0.01" required>
+                <label for="cofins">COFINS (%):</label>
+                    <input type="number" id="cofins" step="0.01" required>
+                <label for="inss">INSS (%):</label>
+                    <input type="number" id="inss" step="0.01" required>
+                <label for="issqn">ISSQN (%):</label>
+                    <input type="number" id="issqn" step="0.01" required>
+
+                <button type="button" id="bt-notaFiscal" onclick="gerarNota()">Emitir Nota Fiscal</button>
+            </form>
+        </section>
+        <section class="resultado" id="nota-fiscal" style="display: none;">
+            <h2>Nota Fiscal de Serviço NFS-e Emitida</h2>
+            <p><strong>Valor da Venda:</strong> R$ <span id="nf-valorVenda"></span></p>
+            <p><strong>Itens Vendidos:</strong> <span id="nf-itens"></span></p>
+            <p><strong>IRPF (R$):</strong> R$ <span id="nf-irpf"></span></p>
+            <p><strong>PIS (R$):</strong> R$ <span id="nf-pis"></span></p>
+            <p><strong>COFINS (R$):</strong> R$ <span id="nf-cofins"></span></p>
+            <p><strong>INSS (R$):</strong> R$ <span id="nf-inss"></span></p>
+            <p><strong>ISSQN (R$):</strong> R$ <span id="nf-issqn"></span></p>
+            <p><strong>Total de Impostos:</strong> R$ <span id="nf-totalImpostos"></span></p>
+            <p><strong>Valor Líquido:</strong> R$ <span id="nf-valorLiquido"></span></p>
+        </section>
+    </main>
+    <script src="script.js"></script>
+    
+</body>
+</html>
